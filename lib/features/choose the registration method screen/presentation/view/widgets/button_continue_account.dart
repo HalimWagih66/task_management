@@ -2,17 +2,20 @@ import 'package:flutter/material.dart';
 
 class ButtonContinueAccount extends StatelessWidget {
   const ButtonContinueAccount(
-      {super.key, required this.text, required this.onPressed, this.icon, required this.background});
+      {super.key, required this.text, required this.onPressed, this.icon, required this.background, required this.onLongPress});
   final Color background;
   final String text;
   final IconData? icon;
   final Future<void> Function() onPressed;
-
+  final Future<void> Function()? onLongPress;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-        onPressed();
+      onLongPress: () async{
+        await onLongPress!();
+      },
+      onPressed: () async{
+        await onPressed();
       },
       style: ElevatedButton.styleFrom(
         backgroundColor: background,

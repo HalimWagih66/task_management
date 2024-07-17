@@ -71,7 +71,6 @@
   "edit": "edit",
   "your_new_full_name_has_been_uploaded_successfully": "Your new name has been changed successfully",
   "your_new_image_has_been_uploaded_successfully": "Your new image has been changed successfully",
-
   "no_categories_have_been_added_yet": "No categories have been added yet",
   "please_enter_category_image": "Please Enter Category Image",
   "edit_Category": "Edit Category",
@@ -93,7 +92,7 @@
   "verify_your_number": "Verify Your Number",
   "to_receive_verification_code": "to receive verification code",
   "please_enter_your_mobile_number": "please Enter your mobile number",
-  "enter_your_new_phone_number": "Enter your new phone number"
-
-
+  "enter_your_new_phone_number": "Enter your new phone number",
+  "successfully": "successfully",
+  "you_have_been_logged_in_successfully" : "You have been logged in successfully"
 }

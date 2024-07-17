@@ -29,6 +29,8 @@ class _ChooseTheRegistrationMethodScreenState extends BaseState<ChooseTheRegistr
   ChooseTheRegistrationMethodViewModel initializeViewModel() {
     return ChooseTheRegistrationMethodViewModel();
   }
+
+
   
-  
+
 }

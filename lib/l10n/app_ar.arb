@@ -70,7 +70,6 @@
   "edit": "تعديل",
   "your_new_full_name_has_been_uploaded_successfully": "تم تغير اسمك الجديد بنجاح",
   "your_new_image_has_been_uploaded_successfully": "تم تغير صورتك الجديد بنجاح",
-
   "no_categories_have_been_added_yet": "لم يتم إضافة أي فئات حتى الآن",
   "please_enter_category_image": "الرجاء إدخال صورة الفئة",
   "edit_category": "تعديل الفئه",
@@ -92,6 +91,6 @@
   "verify_your_number": "تحقق من رقمك",
   "to_receive_verification_code": "لتلقي رمز التحقق",
   "please_enter_your_mobile_number": "الرجاء إدخال رقم هاتفك المحمول",
-  "enter_your_new_phone_number": "أدخل رقم هاتفك الجديد"
-
+  "enter_your_new_phone_number": "أدخل رقم هاتفك الجديد",
+  "you_have_been_logged_in_successfully" : "تم تسجيل الدخول بنجاح"
 }
