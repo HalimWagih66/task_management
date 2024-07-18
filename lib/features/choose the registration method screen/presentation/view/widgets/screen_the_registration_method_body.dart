@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:task_management_application/features/Log%20in%20or%20create%20an%20account%20screen/presentation/log_in_or_sign_up_view.dart';
+import '../../../../Log in or create an account screen/presentation/view/log_in_or_sign_up_with_email_view.dart';
 import '../../view model/choose_the_registration_method_view_model.dart';
 import 'button_continue_account.dart';
 import 'custom_horizontal_line.dart';
@@ -25,7 +25,7 @@ class ScreenTheRegistrationMethodBody extends StatelessWidget {
               ButtonContinueAccount(
                 onLongPress: null,
                   onPressed: () async{
-                    Provider.of<ChooseTheRegistrationMethodViewModel>(context,listen: false).navigator?.navigatePushScreenWithNamed(LogInOrSignUpView.routeName);
+                    Provider.of<ChooseTheRegistrationMethodViewModel>(context,listen: false).navigator?.navigatePushScreenWithNamed(LogInOrSignUpWithEmailView.routeName);
                   },
                   text: AppLocalizations.of(context)!.continue_with_email,
                   icon: FontAwesomeIcons.envelope,
