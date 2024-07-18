@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:task_management_application/core/base/base_state.dart';
 import 'package:task_management_application/core/style/colors/application_color.dart';
-import 'package:task_management_application/features/auth/sign_up/presentation/view/parts_sign_up/name_and_image_input_part.dart';
+import 'package:task_management_application/features/auth/sign_up/presentation/view/parts_sign_up/email_and_password_entry_part.dart';
+import 'package:task_management_application/features/auth/sign_up/presentation/view/parts_sign_up/form_sign_up_name_and_image_user.dart';
 import 'package:task_management_application/features/auth/sign_up/presentation/view/widget/custom_app_bar.dart';
 import 'package:task_management_application/features/auth/sign_up/presentation/view_model/sign_up_navigator.dart';
 import 'package:task_management_application/features/auth/sign_up/presentation/view_model/sign_up_view_model.dart';
@@ -20,7 +21,8 @@ class _SignUpViewState extends BaseState<SignUpView,SignUpViewModel> implements 
   final TextEditingController lastNameController= TextEditingController();
 
   final List<Widget> partsSignUpView = [
-    NameAndImageInputPart(),
+    const FormSignUpNameAndImageUser(),
+    EmailAndPasswordEntryPart()
   ];
 
   @override
@@ -61,4 +63,6 @@ class _SignUpViewState extends BaseState<SignUpView,SignUpViewModel> implements 
   SignUpViewModel initializeViewModel() {
     return SignUpViewModel();
   }
+
+
 }

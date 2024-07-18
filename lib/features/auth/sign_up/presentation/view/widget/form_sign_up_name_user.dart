@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
+import 'package:task_management_application/features/auth/sign_up/presentation/view_model/sign_up_view_model.dart';
 import '../../../../../../core/utils/widget/TextFormField/custom_form_field.dart';
-import 'custom_icon_navigate_between_pages.dart';
 
-class PartForm extends StatelessWidget {
-  PartForm({super.key});
-   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+class FormSignUpNameUser extends StatelessWidget {
+  const FormSignUpNameUser({super.key, required this.formKey});
+   final GlobalKey<FormState> formKey;
 
   @override
   Widget build(BuildContext context) {
+    SignUpViewModel signUpViewModel = Provider.of<SignUpViewModel>(context,listen: false);
     return Form(
       key: formKey,
       child: Column(
@@ -26,6 +28,8 @@ class PartForm extends StatelessWidget {
                   if(text.contains(" ") == true){
                     return AppLocalizations.of(context)!.please_enter_your_first_name_only;
                   }
+                  signUpViewModel.userInformationModel.fullName = text;
+                  return null;
                 },
                 borderField: const UnderlineInputBorder(
                     borderSide: BorderSide(
@@ -37,11 +41,13 @@ class PartForm extends StatelessWidget {
                 textLabel: AppLocalizations.of(context)!.last_name,
                 functionValidate: (text) {
                   if (text == null || text.trim().isEmpty == true) {
-                    return AppLocalizations.of(context)!.please_enter_your_name;
+                    return AppLocalizations.of(context)!.please_enter_your_last_name_only;
                   }
                   if(text.contains(" ") == true){
                     return AppLocalizations.of(context)!.please_enter_your_first_name_only;
                   }
+                  signUpViewModel.userInformationModel.fullName = "${signUpViewModel.userInformationModel.fullName} $text";
+                  return null;
                 },
                 borderField: const UnderlineInputBorder(
                     borderSide: BorderSide(
@@ -49,15 +55,6 @@ class PartForm extends StatelessWidget {
               ),
             ],
           ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: CustomIconNavigateBetweenPages(
-                onPressed: () {
-                  if(formKey.currentState!.validate()){
-                    print("formKey.currentState!.validate()");
-                  }
-                }, iconData: Icons.navigate_next),
-          )
         ],
       ),
     );

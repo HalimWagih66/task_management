@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 class CustomCircleImage extends StatelessWidget {
-  const CustomCircleImage( {super.key, required this.colorBorderCircle,  this.radiusCircleImage = 66, required this.imageProvider,});
+  const CustomCircleImage( {super.key, required this.colorBorderCircle,  this.radiusCircleImage = 66, this.imageProvider,});
   final Color colorBorderCircle;
   final double radiusCircleImage;
   final ImageProvider<Object>? imageProvider;
