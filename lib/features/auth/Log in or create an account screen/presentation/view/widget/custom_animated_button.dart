@@ -1,8 +1,7 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../core/style/colors/application_color.dart';
-
+import '../../../../../../core/style/colors/application_color.dart';
 class CustomAnimatedButton extends StatelessWidget {
   const CustomAnimatedButton({
     super.key, required this.pressEven, required this.textButton,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:task_management_application/features/Log%20in%20or%20create%20an%20account%20screen/presentation/view/widget/custom_animated_button.dart';
-import 'package:task_management_application/features/choose%20the%20registration%20method%20screen/presentation/view/choose_the_registration_method_screen.dart';
-import '../../../../core/utils/style/colors/application_color.dart';
-import '../../../../core/utils/widget/app_bar/custom_leading_item.dart';
+import 'package:task_management_application/core/style/colors/application_color.dart';
+import 'package:task_management_application/core/utils/widget/app_bar/custom_leading_item.dart';
+import 'package:task_management_application/features/auth/Log%20in%20or%20create%20an%20account%20screen/presentation/view/widget/custom_animated_button.dart';
+import '../../../choose the registration method screen/presentation/view/choose_the_registration_method_screen.dart';
 class LogInOrSignUpWithEmailView extends StatelessWidget {
   const LogInOrSignUpWithEmailView({super.key});
 
