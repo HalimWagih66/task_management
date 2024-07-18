@@ -31,6 +31,5 @@ class _ChooseTheRegistrationMethodScreenState extends BaseState<ChooseTheRegistr
   }
 
 
-  
 
 }

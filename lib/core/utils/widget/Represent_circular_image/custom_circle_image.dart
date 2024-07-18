@@ -10,22 +10,18 @@ class CustomCircleImage extends StatelessWidget {
       radius: radiusCircleImage+6,
       backgroundColor: colorBorderCircle,
       child: CircleAvatar(
-        backgroundColor: Colors.white,
-        radius: radiusCircleImage+2,
-        child: CircleAvatar(
-          radius: radiusCircleImage,
-          backgroundColor: const Color(0xfff7f6fa),
-          backgroundImage: imageProvider,
-          child: Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: imageProvider != null
-                ? null
-                : Icon(
-              Icons.person,
-              size: radiusCircleImage+14,
-              color: Colors.grey,
-            ) ,),
-        ),
+        radius: radiusCircleImage,
+        backgroundColor: const Color(0xfff7f6fa),
+        backgroundImage: imageProvider,
+        child: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: imageProvider != null
+              ? null
+              : Icon(
+            Icons.person,
+            size: radiusCircleImage+14,
+            color: Colors.grey,
+          ) ,),
       ),
     );
   }

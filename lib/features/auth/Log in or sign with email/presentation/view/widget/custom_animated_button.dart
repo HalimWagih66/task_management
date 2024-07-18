@@ -16,7 +16,7 @@ class CustomAnimatedButton extends StatelessWidget {
         },
         text: textButton,
         color: primaryColor,
-        buttonTextStyle: Theme.of(context).textTheme.titleLarge
+        buttonTextStyle: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white)
     );
   }
 }
