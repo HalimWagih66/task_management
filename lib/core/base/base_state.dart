@@ -49,7 +49,13 @@ abstract class BaseState<T extends StatefulWidget, VM extends BaseViewModel>
         message: message,
         title: title,
         dialogType: dialogType,
-        context: context);
+        context: context,
+      posAction: posAction,
+      posActionName: posActionName,
+      dismissOnTouchOutside: dismissOnTouchOutside,
+      nigAction: nigAction,
+      nigActionName: nigActionName
+    );
   }
 
   @override
@@ -66,5 +72,12 @@ abstract class BaseState<T extends StatefulWidget, VM extends BaseViewModel>
   @override
   void displayMessageWithSnackPar(String message){
     showMessageWithSnackPar(message: message, context: context);
+  }
+
+
+
+  @override
+  void pushScreenReplacementWithNamed(String routeName) {
+    Navigator.pushReplacementNamed(context, routeName);
   }
 }

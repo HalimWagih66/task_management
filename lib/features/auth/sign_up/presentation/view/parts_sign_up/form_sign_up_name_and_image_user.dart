@@ -53,6 +53,7 @@ class _NameAndImageInputPartState extends State<FormSignUpNameAndImageUser> {
    void validateForm(SignUpViewModel signUpViewModel) {
      if(formKey.currentState!.validate()){
        if (checkImageIsFoundOrNot(signUpViewModel)) {
+         signUpViewModel.userInformationModel.pathImage = signUpViewModel.pickedImage?.path;
          signUpViewModel.nextPageViewBuilder();
        }
      }
@@ -68,4 +69,3 @@ class _NameAndImageInputPartState extends State<FormSignUpNameAndImageUser> {
      return isFoundImage;
    }
 }
-

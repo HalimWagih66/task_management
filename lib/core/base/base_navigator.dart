@@ -7,5 +7,5 @@ abstract class BaseNavigator {
   Future<void> showDialogForUploadImage();
   void displayMessageWithSnackPar(String message);
   void displayMessageWithAwesomeDialog({required String message, required DialogType dialogType, String? title, String? posActionName, Function? posAction, bool dismissOnTouchOutside = false, String? nigActionName, Function? nigAction});
-
+  void pushScreenReplacementWithNamed(String routeName);
 }
