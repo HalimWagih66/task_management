@@ -5,6 +5,7 @@ import 'package:task_management_application/core/style/colors/application_color.
 import 'package:task_management_application/features/auth/sign_up/presentation/view/parts_sign_up/email_and_password_entry_part.dart';
 import 'package:task_management_application/features/auth/sign_up/presentation/view/parts_sign_up/form_sign_up_name_and_image_user.dart';
 import 'package:task_management_application/features/auth/sign_up/presentation/view/widget/custom_app_bar.dart';
+import 'package:task_management_application/features/auth/sign_up/presentation/view/widget/custom_container_background.dart';
 import 'package:task_management_application/features/auth/sign_up/presentation/view_model/sign_up_navigator.dart';
 import 'package:task_management_application/features/auth/sign_up/presentation/view_model/sign_up_view_model.dart';
 import '../../../Log in or sign with email/presentation/view/log_in_or_sign_up_with_email_view.dart';
@@ -36,12 +37,7 @@ class _SignUpViewState extends BaseState<SignUpView,SignUpViewModel> implements 
         ),
       body: Center(
         child: SingleChildScrollView(
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 20),
-            decoration: BoxDecoration(
-                color: Colors.white,
-              borderRadius: BorderRadius.circular(18)
-            ),
+          child: CustomContainerBackground(
             child:  ChangeNotifierProvider(
               create: (context) => viewModel,
               child: SizedBox(
@@ -63,6 +59,5 @@ class _SignUpViewState extends BaseState<SignUpView,SignUpViewModel> implements 
   SignUpViewModel initializeViewModel() {
     return SignUpViewModel();
   }
-
-
 }
+

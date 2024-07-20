@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task_management_application/core/style/colors/application_color.dart';
 import 'package:task_management_application/core/utils/widget/app_bar/custom_leading_item.dart';
 import 'package:task_management_application/features/auth/Log%20in%20or%20sign%20with%20email/presentation/view/widget/custom_animated_button.dart';
+import 'package:task_management_application/features/auth/log%20in/presentation/view/log_in_view.dart';
 import '../../../choose the registration method screen/presentation/view/choose_the_registration_method_screen.dart';
 import '../../../sign_up/presentation/view/sign_up_view.dart';
 class LogInOrSignUpWithEmailView extends StatelessWidget {
@@ -42,7 +43,7 @@ class LogInOrSignUpWithEmailView extends StatelessWidget {
             const SizedBox(height: 20),
             CustomAnimatedButton(
               pressEven: () {
-                //Navigator.pushNamed(context, "LoginView.routeName");
+                Navigator.pushNamed(context, LogInView.routeName);
               },textButton: "Log in",
             ),
             const SizedBox(height: 10),

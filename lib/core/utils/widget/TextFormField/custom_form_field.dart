@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task_management_application/core/utils/widget/TextFormField/text_form_field_border.dart';
 
 typedef FunctionValidate = String? Function(String?);
-class CustomFormField extends StatelessWidget {
+class CustomTextFormField extends StatelessWidget {
   final TextEditingController? inputField;
   final FunctionValidate functionValidate;
   final bool obscureText;
@@ -18,7 +18,7 @@ class CustomFormField extends StatelessWidget {
   final String? initialValue;
   final FunctionValidate? functionOnChanged;
   final TextInputAction? textInputAction;
-  const CustomFormField(
+  const CustomTextFormField(
       {super.key,
         this.inputField,
       required this.functionValidate,

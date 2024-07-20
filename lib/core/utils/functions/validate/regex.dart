@@ -1,5 +1,5 @@
-class ValidationEmail{
-  static bool isEmail(String email) {
+class Regex{
+  static bool isEmailValid(String email) {
 
     String regex = (r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
 

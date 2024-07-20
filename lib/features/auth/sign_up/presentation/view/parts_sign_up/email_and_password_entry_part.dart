@@ -10,34 +10,37 @@ class EmailAndPasswordEntryPart extends StatelessWidget {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    return Column(
-       children: [
-         Expanded(
-           child: Column(
-             children: [
-               Center(
-                 child: Padding(
-                   padding: const EdgeInsets.symmetric(vertical: 28.0, horizontal: 7),
-                   child: Text(
-                     "Enter Your Email And Your Password",
-                     style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.grey),
+    return Form(
+      key: formKey,
+      child: Column(
+         children: [
+           Expanded(
+             child: Column(
+               children: [
+                 Center(
+                   child: Padding(
+                     padding: const EdgeInsets.symmetric(vertical: 28.0, horizontal: 7),
+                     child: Text(
+                       "Enter Your Email And Your Password",
+                       style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.grey),
+                     ),
                    ),
                  ),
-               ),
-               EmailAndPasswordEntryForm(formKey: formKey),
-             ],
+                 const EmailAndPasswordEntryForm(),
+               ],
+             ),
            ),
-         ),
-         Align(
-           alignment: Alignment.bottomCenter,
-           child: ElevatedButton(
-             style: ElevatedButton.styleFrom(backgroundColor: primaryColor),
-               onPressed: () async{
-                await validateForm(context);
-               }, child: Text(AppLocalizations.of(context)!.create_account,style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white)),
-           ),
-         )
-       ],
+           Align(
+             alignment: Alignment.bottomCenter,
+             child: ElevatedButton(
+               style: ElevatedButton.styleFrom(backgroundColor: primaryColor),
+                 onPressed: () async{
+                  await validateForm(context);
+                 }, child: Text(AppLocalizations.of(context)!.create_account,style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.white)),
+             ),
+           )
+         ],
+      ),
     );
   }
 
