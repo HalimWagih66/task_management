@@ -20,7 +20,7 @@ class ChooseTheRegistrationMethodViewModel extends BaseViewModel<ChooseTheRegist
         navigator?.navigatePushScreenWithNamed("On Boarding...");
         return;
       }
-      FirestoreService.createUser(UserInformationModel(email: user.email,fullName: user.displayName,isAccountSocial: true,pathImage: user.photoURL,id: user.uid));
+      FirestoreService.createUser(UserInformationModel(email: user.email,fullName: user.displayName,isAccountSocial: true,phoneNumber: user.phoneNumber,pathImage: user.photoURL,id: user.uid));
       navigator?.navigatePopFromThisScreen();
       navigator?.displayMessageWithAwesomeDialog(message: messageSuccessContent,title: messageSuccessTitle, dialogType: DialogType.success);
     } on FirebaseAuthException catch (e) {
