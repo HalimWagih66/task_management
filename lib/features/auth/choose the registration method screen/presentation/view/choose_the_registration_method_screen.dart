@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:task_management_application/features/choose%20the%20registration%20method%20screen/presentation/view/widgets/screen_the_registration_method_body.dart';
+import 'package:task_management_application/features/auth/choose%20the%20registration%20method%20screen/presentation/view/widgets/screen_the_registration_method_body.dart';
 import '../../../../../core/base/base_state.dart';
 import '../view model/choose_the_registration_method_view_model.dart';
 

@@ -4,7 +4,8 @@ import 'package:task_management_application/core/base/base_navigator.dart';
 import 'package:task_management_application/core/base/base_view_model.dart';
 import 'package:task_management_application/core/services/firestore_service.dart';
 import 'package:task_management_application/core/services/firebase_auth_services.dart';
-import 'package:task_management_application/features/choose%20the%20registration%20method%20screen/data/models/user_information_model.dart';
+
+import '../../data/models/user_information_model.dart';
 
 abstract class ChooseTheRegistrationMethodNavigator extends BaseNavigator{}
 

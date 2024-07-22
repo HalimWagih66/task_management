@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../../features/choose the registration method screen/data/models/user_information_model.dart';
+import '../../features/auth/choose the registration method screen/data/models/user_information_model.dart';
 
 class FirestoreService{
   static CollectionReference<UserInformationModel> getUsersCollection(){
