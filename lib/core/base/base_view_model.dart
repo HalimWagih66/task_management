@@ -1,6 +1,5 @@
 
 import 'dart:io';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:path/path.dart' as p;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -31,9 +30,9 @@ class BaseViewModel<Nav extends BaseNavigator> extends ChangeNotifier{
     try {
       await FirebaseStorageService.uploadImageInFirebaseStorage(internalFolderName: FirebaseAuth.instance.currentUser!.email!, imageName: replaceImageName("person"), nameExternalFolder: "Images", file: pickedImage!);
     } on FirebaseException catch (e) {
-      navigator?.displayMessageWithSnackPar(e.message??e.code);
+      navigator?.displayMessageWithSnackPar(message:e.message??e.code);
     } catch (e){
-       navigator?.displayMessageWithSnackPar(e.toString());
+       navigator?.displayMessageWithSnackPar(message:e.toString());
     }
   }
   void changePickImage(File pickImage) {

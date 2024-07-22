@@ -12,6 +12,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0,
+      backgroundColor: Colors.white,
       leading: CustomLeadingAppBar(onTap: onTap,iconData: iconData
       ),
       title: Text(title,style: Theme.of(context).textTheme.titleLarge,),

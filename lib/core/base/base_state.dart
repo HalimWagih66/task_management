@@ -70,7 +70,7 @@ abstract class BaseState<T extends StatefulWidget, VM extends BaseViewModel>
         });
   }
   @override
-  void displayMessageWithSnackPar(String message){
+  void displayMessageWithSnackPar({required String message}){
     showMessageWithSnackPar(message: message, context: context);
   }
 

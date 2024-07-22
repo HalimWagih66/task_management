@@ -5,13 +5,13 @@ import 'package:task_management_application/core/base/base_view_model.dart';
 import 'package:task_management_application/core/services/firebase_storage_service.dart';
 import 'package:task_management_application/core/services/firestore_service.dart';
 import 'package:task_management_application/features/auth/choose%20the%20registration%20method%20screen/data/models/user_information_model.dart';
+import 'package:task_management_application/features/auth/log%20in/presentation/view/log_in_view.dart';
 import 'package:task_management_application/features/auth/sign_up/presentation/view_model/sign_up_navigator.dart';
 
 class SignUpViewModel extends BaseViewModel<SignUpNavigator> {
   PageController controller = PageController();
   UserInformationModel userInformationModel = UserInformationModel();
   String? password;
-
   void nextPageViewBuilder() {
     controller.nextPage(
         duration: const Duration(milliseconds: 300), curve: Curves.linear);
@@ -38,24 +38,23 @@ class SignUpViewModel extends BaseViewModel<SignUpNavigator> {
       navigator?.displayMessageWithAwesomeDialog(
           message: "An email has been sent to your email address to create an account", title: "Success", dialogType: DialogType.success, posActionName: "Ok",
           posAction: () {
-            navigator?.pushScreenReplacementWithNamed("Log in");
+            navigator?.pushScreenReplacementWithNamed(LogInView.routeName);
           });
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
         navigator?.navigatePopFromThisScreen();
         navigator
-            ?.displayMessageWithSnackPar("The password provided is too weak.");
+            ?.displayMessageWithSnackPar(message: "The password provided is too weak.");
       } else if (e.code == 'email-already-in-use') {
         navigator?.navigatePopFromThisScreen();
-        navigator?.displayMessageWithSnackPar(
-            "The account already exists for that email.");
+        navigator?.displayMessageWithSnackPar(message: "The account already exists for that email.");
       }
     } on FirebaseException catch (e) {
       navigator?.navigatePopFromThisScreen();
-      navigator?.displayMessageWithSnackPar(e.toString());
+      navigator?.displayMessageWithSnackPar(message:e.toString());
     } catch (e) {
       navigator?.navigatePopFromThisScreen();
-      navigator?.displayMessageWithSnackPar(e.toString());
+      navigator?.displayMessageWithSnackPar(message:e.toString());
     }
   }
 }

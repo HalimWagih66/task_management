@@ -7,7 +7,7 @@ class CustomTextFormField extends StatelessWidget {
   final FunctionValidate functionValidate;
   final bool obscureText;
   final TextInputType textInputType;
-  final String textLabel;
+  final String? textLabel;
   final IconData? suffixIcon;
   final String? hintText;
   final String fontFamily;
@@ -18,13 +18,15 @@ class CustomTextFormField extends StatelessWidget {
   final String? initialValue;
   final FunctionValidate? functionOnChanged;
   final TextInputAction? textInputAction;
+  final void Function(String?)? onSaved;
   const CustomTextFormField(
       {super.key,
         this.inputField,
+        this.onSaved,
       required this.functionValidate,
       this.obscureText = false,
       this.textInputType = TextInputType.text,
-      required this.textLabel,
+        this.textLabel,
       this.suffixIcon,
       this.fontFamily = "Poppins",
        this.borderField,
@@ -41,7 +43,7 @@ class CustomTextFormField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(textLabel,style: Theme.of(context).textTheme.titleLarge?.copyWith(letterSpacing: 1.5,decorationThickness: 0),),
+        Text(textLabel!,style: Theme.of(context).textTheme.titleMedium?.copyWith(letterSpacing: 1.5,decorationThickness: 0),),
          const SizedBox(height: 13),
         TextFormField(
           keyboardType: textInputType,
@@ -49,6 +51,10 @@ class CustomTextFormField extends StatelessWidget {
           obscureText: obscureText,
           controller: inputField,
           validator: functionValidate,
+          onSaved: (newValue) {
+            onSaved!(newValue);
+            //onSaved(newValue);
+          },
           maxLines: maxLines,
           onChanged: functionOnChanged,
           initialValue: initialValue,

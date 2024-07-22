@@ -16,7 +16,7 @@ class TaskManagement extends StatelessWidget {
         ChooseTheRegistrationMethodScreen.routeName: (context)=>const ChooseTheRegistrationMethodScreen(),
         LogInOrSignUpWithEmailView.routeName: (context)=> const LogInOrSignUpWithEmailView(),
         SignUpView.routeName:(context) => const SignUpView(),
-        LogInView.routeName:(context) => const LogInView()
+        LogInView.routeName:(context) =>  LogInView()
       },
       initialRoute: ChooseTheRegistrationMethodScreen.routeName,
       localizationsDelegates: const [

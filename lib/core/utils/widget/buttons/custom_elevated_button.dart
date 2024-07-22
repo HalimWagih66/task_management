@@ -11,7 +11,7 @@ class CustomElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(onPressed: () {
-
-    },style: ElevatedButton.styleFrom(backgroundColor: primaryColor), child: Text("Login",style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white),),);
+      onPressed!();
+    },style: ElevatedButton.styleFrom(backgroundColor: primaryColor), child: Text(text,style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.white),),);
   }
 }
