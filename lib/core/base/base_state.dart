@@ -80,4 +80,10 @@ abstract class BaseState<T extends StatefulWidget, VM extends BaseViewModel>
   void pushScreenReplacementWithNamed(String routeName) {
     Navigator.pushReplacementNamed(context, routeName);
   }
+
+
+  @override
+  void pushScreenAndRemoveUntil(String routeName) {
+    Navigator.pushNamedAndRemoveUntil(context, routeName, (route) => false);
+  }
 }
