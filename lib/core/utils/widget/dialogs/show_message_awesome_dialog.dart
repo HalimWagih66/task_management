@@ -14,14 +14,14 @@ void showMessageWithAwesomeDialog({
   }) {
     AwesomeDialog(
       dismissOnTouchOutside: dismissOnTouchOutside,
-      dialogBackgroundColor: const Color(0xff141922),
+      dialogBackgroundColor: const Color(0xffffffff),
       context: context,
       dialogType: dialogType,
       title: title,
-      titleTextStyle: Theme.of(context).textTheme.titleLarge,
+      titleTextStyle: Theme.of(context).textTheme.displaySmall,
       animType: AnimType.rightSlide,
       desc: message,
-      descTextStyle: Theme.of(context).textTheme.displayMedium,
+      descTextStyle: Theme.of(context).textTheme.titleLarge,
       btnCancelOnPress: nigActionName != null
           ? () {
         nigAction!.call();

@@ -12,7 +12,7 @@ class CustomCachedNetworkImage extends StatelessWidget {
     return  ClipRRect(
       borderRadius: BorderRadius.circular(borderRadiusCircular),
       child: CachedNetworkImage(
-        imageUrl: urlImage??"",
+        imageUrl: urlImage,
         placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
         errorWidget: (context, url, error) => const Icon(Icons.error),
         height: height,
